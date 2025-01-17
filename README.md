@@ -9,3 +9,7 @@
 [X] Interpolação de valores
 
 ## Aula 02
+[X] Components
+[X] Props
+[X] Childrens
+[X] Interface em TS

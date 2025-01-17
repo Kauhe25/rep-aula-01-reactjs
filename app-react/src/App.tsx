@@ -1,35 +1,32 @@
 import './App.css'
+import Titulo from './Components/Titulo'
+import Placeholder from './Components/placeholder'
 
-
-
-function App() {
-
-  const welcome = <h1>Seja bem vindo</h1>
-  const curtindo = true;
-  const numero = 6;
-  const expressao = numero % 2 == 0? 'par' : 'impar';
-  const cursos = ['html','css','js'];
+const App = () => {
   return (
-    // React Fragment
     <>
-      {/* Codigo Html */}
-      <h1>Aula Revisão</h1>
-      <h2>texto</h2>
-      {welcome}
-      <h2>Introdução ao React</h2>
-      {curtindo ? 'Estou curtindo' : 'Não curti'}
+      <Titulo 
+        nome={'react'} 
+        descricao={'Seja Bem vindo'} 
+        data={'01/02/2025'} 
+      >
+        <Placeholder/>
+      </Titulo>
 
-      <h1 className={expressao}>
-        {numero}</h1>
-
-      {curtindo && <div><h2>Estou curtindo, toop</h2></div> }
-    
-      {/* Exemplo de iteração */}
-      <p>{cursos.map((curso, posicao) => {
-        return <p>{curso} - {posicao}</p>
-      })}</p>
+      <Titulo 
+        nome={'TypeScript'} 
+        data={'03/02/2025'}/>
+      {/* <h1>Aula 02 Revisão</h1> */}
     </>
   )
 }
+
+// function App() {
+//   return (
+//     <>
+//       <h1>Aula 02 Revisão</h1>
+//     </>
+//   )
+// }
 
 export default App
